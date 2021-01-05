@@ -9,6 +9,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+    if(msg.author.bot)return;
     const ohno = msg.guild.emojis.cache.find(x => x.name === "ohno")
     if (!ohno) {
         msg.guild.emojis.create("https://cdn.discordapp.com/emojis/597477759689687040.png?v=1", "ohno")
