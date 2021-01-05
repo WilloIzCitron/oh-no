@@ -1,10 +1,10 @@
 {
-  "name": "egg",
+  "name": "ohno",
   "version": "1.0.0",
-  "description": "The bot responds to eggs.",
-  "main": "egg.js",
+  "description": "The bot responds to ohno.",
+  "main": "ohno.js",
   "scripts": {
-	"start": "node egg.js"
+    "start": "node ohno.js"
   },
   "repository": {
     "type": "git",
