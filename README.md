@@ -6,5 +6,5 @@ This bot reacts to any message containing `oh no`, and will count the total oh n
 
 - download this repo
 - install package using yarn or npm
-- paste a `ohno-BOT-TOKEN` to .env
+- paste a `ohno_BOT_TOKEN` to .env
 - run
