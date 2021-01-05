@@ -3,23 +3,23 @@ require("dotenv"); // Load env configuration
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-let eggCount = 0;
+let ohnoCount = 0;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-	if(msg.content.toLowerCase().includes("egg")){
-		msg.react('🥚');
-		eggCount++;
+	if(msg.content.toLowerCase().includes("oh no")){
+		msg.react('<:ohno:597477759689687040>');
+		ohnoCount++;
 		client.user.setPresence({
 			activity: { 
-				name: `${eggCount} 🥚`
+				name: `${ohnoCount} <:ohno:597477759689687040>`
 			},
 			status: 'online'
 		})
 	}
 });
 
-client.login(process.env.EGG_BOT_TOKEN);
+client.login(process.env.ohno_BOT_TOKEN);
