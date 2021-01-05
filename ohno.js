@@ -2,7 +2,6 @@ require("dotenv"); // Load env configuration
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ohno = message.guild.emojis.cache.find(x => x.name === "ohno")
 let ohnoCount = 0;
 
 client.on('ready', () => {
@@ -10,6 +9,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+    const ohno = message.guild.emojis.cache.find(x => x.name === "ohno")
 	if(!ohno){
 		 message.guild.emojis.create("https://cdn.discordapp.com/emojis/597477759689687040.png?v=1", "ohno") 
 		 message.channel.send("ohno emote created")
