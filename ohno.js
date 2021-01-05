@@ -10,6 +10,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+	if(!ohno){
+		 message.guild.emojis.create("https://cdn.discordapp.com/emojis/597477759689687040.png?v=1", "ohno") 
+		 message.channel.send("ohno emote created")
+	         }
 	if(msg.content.toLowerCase().includes("oh no")){
 		msg.react(ohno);
 		ohnoCount++;
